@@ -1,0 +1,18 @@
+.main-header {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 80px;
+  color: @black;
+  border-top: 1px solid @gray;
+  z-index: 1;
+
+  @media (min-width: @width-tablets) {
+    min-height: 88px;
+    border: none;
+  }
+}
+
+.main-header__nav {
+  .set-container();
+}

@@ -1,0 +1,32 @@
+.mar-pad-reset() {
+  margin: 0;
+  padding: 0;
+}
+
+.list-reset() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container() {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.set-container(@width: auto) {
+  width: @width;
+  margin: 0 auto;
+
+  @media (min-width: @width-tablets) {
+    width: 668px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 1050px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
