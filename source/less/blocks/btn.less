@@ -1,51 +1,33 @@
 .btn {
   box-sizing: border-box;
   display: inline-block;
-  padding: 11px 20px;
-  font-size: 14px;
-  line-height: 18px;
+  padding: 14px 20px;
+  font-size: 17px;
+  line-height: 20px;
   vertical-align: middle;
   text-align: center;
-  //font-family: "Oswald", "Arial", sans-serif;
-  font-weight: 400;
-  color: @white;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: 700;
+  color: @gray-font;
+  background-color: @white;
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
-  border: none;
+  border: 2px solid @gray-font;
   outline: none;
   transition: all 0.2s ease;
 
   @media (min-width: @width-tablets) {
-    padding: 15px 27px 17px;
-    font-size: 20px;
-    line-height: 20px;
+
   }
 
-  &--green {
-    background-color: @green;
+  &:hover {
+    color: @white;
+    background-color: @gray-font;
   }
 
-  &--green:hover,
-  &--green:focus {
-    background-color: @dark-green;
-  }
-
-  &--green:active {
-    color: #8fc46e;
-  }
-
-  &--gray {
-    color: @black;
-    background-color: @gray;
-  }
-
-  &--gray:hover,
-  &--gray:focus {
-    background-color: @gray-middle3;
-  }
-
-  &--gray:active {
-    color: #b9b9b9;
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @gray-font;
   }
 }

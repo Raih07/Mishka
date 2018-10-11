@@ -16,6 +16,7 @@
   @media (min-width: @width-tablets) {
     position: relative;
     padding-top: 153px;
+    margin-bottom: 47px;
     background-image: url("../img/hero-tablet@1x.jpg");
     background-size: 1150px auto;
     background-position: center top -1px;
@@ -24,7 +25,7 @@
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/hero-tablet@2x.jpg");
     }
-    
+
     &::after {
       content: "";
       position: absolute;
@@ -40,12 +41,13 @@
   }
 
   @media (min-width: @width-desktop) {
+    margin-bottom: 125px;
     background-image: url("../img/hero-desktop@1x.jpg");
-    
+
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/hero-desktop@2x.jpg");
     }
-    
+
     &::after {
       height: 15px;
       background-position: 13px 0;
@@ -74,7 +76,7 @@
     font-size: 43px;
     line-height: 50px;
   }
-  
+
   @media (min-width: @width-desktop) {
     margin-bottom: 359px;
     font-size: 53px;
@@ -84,7 +86,7 @@
 
 .intro__things-list {
   .list-reset();
-  
+
   @media (min-width: @width-tablets) {
     display: flex;
     flex-wrap: wrap;
@@ -93,7 +95,7 @@
 
 .intro__things-item {
   width: 100%;
-  
+
   @media (min-width: @width-tablets) {
     width: 50%;
   }
@@ -111,47 +113,47 @@
   font-weight: 700;
   color: @white;
   text-decoration: none;
-  
+
   &--interior {
     background-color: @green;
   }
-  
+
   &--toys {
     background-color: @dark-green;
   }
-  
+
   &--interior:hover {
     background-color: @green-hover;
   }
-    
+
   &--toys:hover {
     background-color: @dark-green-hover;
   }
-    
+
   &:active {
     color: rgba(255, 255, 255, 0.3);
   }
-    
+
   &:hover .intro__icon {
     opacity: 0.7;
   }
-  
+
   &:active .intro__icon {
     opacity: 0.3;
   }
-    
+
   @media (min-width: @width-tablets) {
     padding-top: 28px;
     padding-bottom: 29px;
     padding-left: 35px;
     font-size: 20px;
     line-height: 30px;
-    
+
     &:hover {
       padding-top: 23px;
       padding-bottom: 34px;
     }
-    
+
     &:hover::before {
       content: "";
       position: absolute;
@@ -160,15 +162,15 @@
       height: 5px;
       width: 100%;
     }
-      
+
     &--interior:hover::before {
       background-color: @green-hover;
     }
-      
+
     &--toys:hover::before {
       background-color: @dark-green-hover;
     }
-    
+
     &:hover .intro__icon {
       transform: translateY(-60%);
     }
@@ -186,22 +188,22 @@
   transform: translateY(-50%);
   fill: #149080;
   opacity: 0.5;
-  
+
   &--interior {
     right: 35px;
     width: 40px;
     height: 62px;
-    
+
     @media (min-width: @width-tablets) {
       right: 36px;
     }
   }
-  
+
   &--toys {
     right: 27px;
     width: 60px;
     height: 60px;
-    
+
     @media (min-width: @width-tablets) {
       right: 34px;
     }

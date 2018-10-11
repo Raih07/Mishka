@@ -1,0 +1,242 @@
+.promo-product {
+  position: relative;
+  padding-bottom: 41px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-position: -5px 0;
+    background-size: auto 6px;
+  }
+
+  @media (min-width: @width-tablets) {
+    padding-bottom: 68px;
+
+    &::after {
+      height: 15px;
+      background-position: -15px 0;
+      background-size: auto 15px;
+    }
+  }
+
+  @media (min-width: @width-desktop) {
+    padding-bottom: 95px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+}
+
+.promo-product__wrapper {
+  .container();
+  .set-container();
+
+  @media (min-width: @width-tablets) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: @width-desktop) {
+    position: relative;
+    padding-left: 225px;
+    width: 875px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -95px;
+      left: 50px;
+      right: 50px;
+      height: 21px;
+      background: url("../img/bg-zigzag-line.svg");
+      background-repeat: repeat-x;
+      background-position: 25px 0;
+      background-size: auto 21px;
+    }
+  }
+}
+
+.promo-product__header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-bottom: 23px;
+
+  @media (min-width: @width-tablets) {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: @width-desktop) {
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    margin-left: -175px;
+    z-index: 2;
+  }
+}
+
+.promo-product__tittle {
+  .mar-pad-reset();
+  margin-bottom: 5px;
+  flex-grow: 1;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+  color: @black;
+
+  @media (min-width: @width-tablets) {
+    width: 501px;
+    margin-bottom: 0;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 525px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+.promo-product__mark {
+  .mar-pad-reset();
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @green;
+
+  @media (min-width: @width-tablets) {
+    width: 126px;
+    line-height: 17px;
+    text-align: center;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-left: 20px;
+    margin-right: 26px;
+  }
+}
+
+.promo-product__info {
+  margin-bottom: 28px;
+
+  @media (min-width: @width-tablets) {
+    width: 290px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-bottom: 84px;
+  }
+}
+
+.promo-product__description {
+  .mar-pad-reset();
+  margin-bottom: 18px;
+  line-height: 24px;
+
+  @media (min-width: @width-tablets) {
+    margin-bottom: 37px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-bottom: 49px;
+  }
+}
+
+.promo-product__spec {
+  border-collapse: collapse;
+  width: 100%;
+  line-height: 20px;
+
+  @media (min-width: @width-tablets) {
+    font-size: 15px;
+  }
+}
+
+.promo-product__spec-row {
+  display: flex;
+  padding-top: 7px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid @gray;
+}
+
+.promo-product__spec-name {
+  width: 36%;
+
+  @media (min-width: @width-tablets) {
+    width: 32%;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 33%;
+  }
+}
+
+.promo-product__picture {
+  width: 260px;
+  margin: 0 auto;
+
+  @media (min-width: @width-tablets) {
+    width: 333px;
+    margin: 0;
+    margin-left: 50%;
+    margin-top: -404px;
+    order: 4;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 525px;
+    margin-top: -636px;
+    margin-left: 351px;;
+  }
+}
+
+.promo-product__img {
+  display: block;
+  width: 260px;
+  height: auto;
+
+  @media (min-width: @width-tablets) {
+    width: 333px;
+  }
+
+  @media (min-width: @width-desktop) {
+    width: 525px;
+  }
+}
+
+.promo-product__order {
+  @media (min-width: @width-tablets) {
+    width: 290px;
+  }
+}
+
+.promo-product__cost {
+  .mar-pad-reset();
+  padding: 25px 0;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+
+  @media (min-width: @width-tablets) {
+    margin-bottom: 9px;
+    font-size: 20px;
+  }
+}
+
+.promo-product__btn {
+  width: 100%;
+}
