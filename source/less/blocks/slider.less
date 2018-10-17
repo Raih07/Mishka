@@ -1,0 +1,44 @@
+.slider__toggles {
+  display: flex;
+}
+
+.slider__btn {
+  .mar-pad-reset();
+  width: 50%;
+  min-height: 52px;
+  height: 41px;
+  border: 1px solid @gray;
+  cursor: pointer;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px 26px;
+  outline: none;
+
+  @media (min-width: @width-tablets) {
+    border: none;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  /*
+  &:focus {
+    outline: 2px solid @dark-blue;
+    outline-offset: 4px;
+  }*/
+
+  &--prev {
+    background-image: url("../img/icon-left-arrow.svg");
+  }
+
+  &--next {
+    margin-left: -1px;
+    background-image: url("../img/icon-right-arrow.svg");
+  }
+}
