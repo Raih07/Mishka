@@ -33,7 +33,7 @@ nav_toggle.addEventListener('click', function() {
 
 /*******Карта в подвале*********/
 
-var desktop_width = 1300;
+var desktop_width = 1150;
 
 if(document.getElementById('YMapsID')) {
   ymaps.ready(init);
@@ -45,13 +45,13 @@ if(document.getElementById('YMapsID')) {
 
     if (width_scr >= desktop_width) {
         myMap = new ymaps.Map("YMapsID", {
-        center: [59.939117, 30.319356],
-        zoom: 17,
+        center: [59.938800, 30.323148],
+        zoom: 16,
         controls: [] //убираем все кнопки управления
         });
       } else {
         myMap = new ymaps.Map("YMapsID", {
-        center: [59.938812, 30.323093],
+        center: [59.938800, 30.323148],
         zoom: 17,
         controls: [] //убираем все кнопки управления
         });
@@ -70,14 +70,14 @@ if(document.getElementById('YMapsID')) {
     myMap.controls.add('typeSelector'); // Переключатель слоев карты – второй слева.
     myMap.controls.get('typeSelector').options.set('size', 'small');//принудительно выбран маленькой мконки
 
-    myPlacemark = new ymaps.Placemark([59.938812, 30.323093], {
-      hintContent: 'Cat Energy',
+    myPlacemark = new ymaps.Placemark([59.938697, 30.323120], {
+      hintContent: 'Mishka',
       balloonContent: 'Санкт-Петербург, ул. Большая Конюшенная, д. 19/8'
     }, {
       iconLayout: 'default#image', //изображение без доп текста
-      iconImageHref: 'img/map-pin.png',
-      iconImageSize: [124, 106],
-      iconImageOffset: [-62, -93] //смещение картинки
+      iconImageHref: 'img/icon-map-pin.svg',
+      iconImageSize: [67, 100],
+      iconImageOffset: [-44, -100] //смещение картинки
     });
 
     myMap.geoObjects.add(myPlacemark);
