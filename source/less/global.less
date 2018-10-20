@@ -44,21 +44,21 @@ img {
   outline-offset: 3px;
 }
 
-.tab-user .compare__btn:focus {
-  outline: 2px solid #989898;
-  outline-offset: 3px;
+.tab-user .slider__btn:focus {
+  background-color: @gray;
+
+  @media (min-width: @width-tablets) {
+    outline: 2px solid #989898;
+    outline-offset: -1px;
+    background-color: transparent;
+  }
 }
 
-.tab-user .btn {
-  &--green:focus {
-    box-shadow: 0 0 0 3px #ffffff,
-      0 0 0 6px @green;
-  }
-
-  &--gray:focus {
-    box-shadow: 0 0 0 3px #ffffff,
-      0 0 0 6px @gray-middle2;
-  }
+.tab-user .btn:focus {
+  color: @white;
+  background-color: @gray-font;
+  box-shadow: 0 0 0 3px #ffffff,
+    0 0 0 6px @gray-font;
 }
 
 .tab-user .product__img-link:focus {
