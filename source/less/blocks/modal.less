@@ -1,0 +1,169 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1000;
+
+  &--close {
+    display: none;
+  }
+
+  &--open {
+    display: block;
+  }
+}
+
+.modal__main {
+  position: absolute;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 465px;
+  .container();
+  padding-top: 30px;
+  padding-bottom: 46px;
+  text-align: center;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.25);
+  background-color: @white;
+  border-top: 1px solid #c7c7c7;
+  transform: translate(-50%, -50%);
+
+  @media (min-width: @width-tablets) {
+    width: 568px;
+    max-width: none;
+    padding: 33px 106px 46px;
+    border: 1px solid #c7c7c7;
+  }
+}
+
+.madal__tittle {
+  .mar-pad-reset();
+  margin-left: 55px;
+  margin-right: 55px;
+  margin-bottom: 12px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @black;
+
+  @media (min-width: @width-tablets) {
+    margin: 0;
+    margin-bottom: 14px;
+    font-size: 30px;
+    line-height: 57px;
+  }
+}
+
+.modal__text {
+  .mar-pad-reset();
+  margin-bottom: 23px;
+  font-size: 15px;
+  line-height: 30px;
+  color: @gray-font;
+
+  @media (min-width: @width-tablets) {
+    margin-bottom: 21px;
+    font-size: 17px;
+  }
+}
+
+.modal__form-order {
+  width: 260px;
+  margin: 0 auto;
+
+  @media (min-width: @width-tablets) {
+    width: auto;
+    margin: 0;
+  }
+}
+
+.modal__toogle-list {
+  .list-reset();
+  margin-bottom: 31px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal__label {
+  display: block;
+  box-sizing: border-box;
+  width: 82px;
+  height: 52px;
+  padding: 15px 0;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: @gray-font;
+  border: 2px solid @gray;
+  cursor: pointer;
+
+  @media (min-width: @width-tablets) {
+    width: 112px;
+    padding: 16px 0;
+  }
+
+  &:hover {
+    border-color: #c7c7c7;
+  }
+}
+
+.modal__toogle:checked + .modal__label {
+  border-color: @green;
+}
+
+.modal__btn {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  color: @white;
+  background-color: @green;
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: block;
+  width: 20.5px;
+  height: 20.5px;
+  padding: 0;
+  border: none;
+  background-color: #ffffff;
+  background-image: url("../img/icon-menu-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20.5px 20.5px;
+  outline: none;
+  cursor: pointer;
+
+  &:active,
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:focus {
+    outline: 2px solid #989898;
+    outline-offset: 2px;
+  }
+
+}
+
+.modal-write-us .modal-close:hover {
+	opacity: 1;
+}
+
+.tab-user .modal-close:focus {
+	opacity: 1;
+	box-shadow: 0 0 0 3px #fff,
+	0 0 6px 9px #d13b3f;
+}
+
+.modal-write-us .modal-close:active {
+	opacity: 0.1;
+}
