@@ -1,6 +1,59 @@
 .page-main {
+  overflow-x: hidden;
+
   @media (min-width: @width-tablets) {
     margin-top: -60px;
     border-top: 1px solid @gray;
+  }
+}
+
+.page-main__header {
+  padding-top: 70px;
+  padding-bottom: 76px;
+  background-color: @gray-light2;
+
+  @media (min-width: @width-tablets) {
+    position: relative;
+    padding-top: 93px;
+    padding-bottom: 80px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-position: -5px 0;
+      background-size: auto 23px;
+    }
+  }
+
+  @media (min-width: @width-desktop) {
+    padding-top: 94px;
+    padding-bottom: 100px;
+  }
+}
+
+.page-main__tittle {
+  margin: 0;
+  .container();
+  .set-container();
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: 700;
+  text-align: center;
+  color: #231f20;
+
+  @media (min-width: @width-tablets) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: @width-desktop) {
+    font-size: 53px;
+    line-height: 57px;
   }
 }

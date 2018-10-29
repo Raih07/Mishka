@@ -1,7 +1,8 @@
 .promo-product {
-  position: relative;
+  //position: relative;
   padding-bottom: 41px;
 
+  /*
   &::after {
     content: "";
     position: absolute;
@@ -13,24 +14,26 @@
     background-repeat: repeat-x;
     background-position: -5px 0;
     background-size: auto 6px;
-  }
+  }*/
 
   @media (min-width: @width-tablets) {
     padding-bottom: 68px;
 
+    /*
     &::after {
       height: 15px;
       background-position: -15px 0;
       background-size: auto 15px;
-    }
+    }*/
   }
 
   @media (min-width: @width-desktop) {
     padding-bottom: 95px;
 
+    /*
     &::after {
       display: none;
-    }
+    }*/
   }
 
 }
@@ -45,22 +48,24 @@
   }
 
   @media (min-width: @width-desktop) {
-    position: relative;
+    //position: relative;
     padding-left: 225px;
     width: 875px;
 
+    /*
     &::after {
       content: "";
       position: absolute;
       bottom: -95px;
-      left: 50px;
+      //left: 50px;
+      left: calc(~"(100vw - 1050px) / 2");
       right: 50px;
       height: 21px;
       background: url("../img/bg-zigzag-line.svg");
       background-repeat: repeat-x;
       background-position: 25px 0;
       background-size: auto 21px;
-    }
+    }*/
   }
 }
 
