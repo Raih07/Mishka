@@ -1,0 +1,142 @@
+.production {
+  box-sizing: border-box;
+  margin: 0 30px;
+  margin-bottom: 58px;
+  padding-top: 24px;
+  padding-bottom: 32px;
+  border: 1px solid @gray;
+
+  @media (min-width: @width-tablets) {
+    display: flex;
+    flex-direction: column;
+    width: 668px;
+    margin: 0 auto;
+    margin-bottom: 63px;
+    padding-top: 0;
+    padding-bottom: 45px;
+  }
+
+  @media (min-width: @width-desktop) {
+    position: relative;
+    width: 1050px;
+    min-height: 455px;
+    padding-left: 681px;
+    margin-bottom: 105px;
+  }
+
+  &:hover .product__body {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active .product__body {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+.production__tittle {
+  position: relative;
+  .mar-pad-reset();
+  padding-left: 89px;
+  margin-bottom: 24px;
+  margin-right: 10px;
+  font-size: 17px;
+  line-height: 24px;
+  color: @black;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 33px;
+    margin-top: -16px;
+    width: 32px;
+    height: 32px;
+    background: url("../img/icon-video.svg") no-repeat center;
+    background-size: 32px 32px;
+  }
+
+  @media (min-width: @width-tablets) {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 32px;
+    padding-left: 65px;
+    font-size: 20px;
+    line-height: 24px;
+
+    &::before {
+      left: 1px;
+    }
+  }
+
+  @media (min-width: @width-desktop) {
+    padding-left: 0;
+    padding-right: 56px;
+    margin: 0;
+    margin-left: 78px;
+    margin-top: 95px;
+    margin-bottom: 33px;
+
+    &::before {
+      left: 2px;
+      top: -38px;
+    }
+  }
+}
+
+.production__vedeo-player {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 28px;
+
+  @media (min-width: @width-tablets) {
+    width: 668px;
+    height: 455px;
+    margin-bottom: 37px;
+    order: -1;
+  }
+
+  @media (min-width: @width-desktop) {
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    width: 682px;
+    margin-bottom: 0;
+  }
+}
+
+.production__description {
+  padding: 0 33px;
+
+  @media (min-width: @width-tablets) {
+    padding: 0 40px;
+  }
+
+  @media (min-width: @width-desktop) {
+    padding-left: 79px;
+    padding-right: 56px;
+  }
+}
+
+.production__text {
+  .mar-pad-reset();
+  font-size: 13px;
+  line-height: 24px;
+
+  @media (min-width: @width-tablets) {
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
+
+.production__btn {
+  margin-top: 25px;
+  width: 100%;
+
+  @media (min-width: @width-tablets) {
+    margin-top: 35px;
+  }
+
+  @media (min-width: @width-desktop) {
+    margin-top: 46px;
+  }
+}

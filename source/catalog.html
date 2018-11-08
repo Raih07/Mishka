@@ -146,54 +146,22 @@
         </div>
       </section>
 
-      <section class="extra-products">
-        <div class="extra-products__wrapper">
-          <h2 class="extra-products__tittle titte-line">Дополнительные товары</h2>
-          <div class="extra-products__box">
-            <ul class="extra-products__list">
-              <li class="extra-products__item">
-                <h3 class="extra-products__item-tiitle">
-                  <a class="extra-products__item-link" href="#">Сахарозаменитель</a>
-                </h3>
-                <p class="extra-products__item-quantity">1 Упаковка (100 г)</p>
-                <p class="extra-products__item-cost">100 р.</p>
-                <a class="extra-products__btn btn btn--green" href="#">Заказать</a>
-              </li>
-
-              <li class="extra-products__item">
-                <h3 class="extra-products__item-tiitle">
-                  <a class="extra-products__item-link" href="#">Питьевая вода</a>
-                </h3>
-                <p class="extra-products__item-quantity">5 литров</p>
-                <p class="extra-products__item-cost">50 р.</p>
-                <a class="extra-products__btn btn btn--green" href="#">Заказать</a>
-              </li>
-
-              <li class="extra-products__item">
-                <h3 class="extra-products__item-tiitle">
-                  <a class="extra-products__item-link" href="#">Молоко</a>
-                </h3>
-                <p class="extra-products__item-quantity">1 литр</p>
-                <p class="extra-products__item-cost">100 р.</p>
-                <a class="extra-products__btn btn btn--green" href="#">Заказать</a>
-              </li>
-
-              <li class="extra-products__item">
-                <h3 class="extra-products__item-tiitle">
-                  <a class="extra-products__item-link" href="#">Витамины</a>
-                </h3>
-                <p class="extra-products__item-quantity">1 упаковка (30 г)</p>
-                <p class="extra-products__item-cost">300 р.</p>
-                <a class="extra-products__btn btn btn--green" href="#">Заказать</a>
-              </li>
-            </ul>
-
-            <div class="extra-products__gift">
-              <a class="extra-products__gift-link" href="#">
-                <p class="extra-products_gift-text">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
-              </a>
-            </div>
-          </div>
+      <section class="production">
+        <h2 class="production__tittle">Процесс производства</h2>
+        <div class="production__vedeo-player video-player">
+          <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
+            <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img class="player__img" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Видео производсвта нашей продукции">
+          </picture>
+          <button class="player__play-btn" type="button" aria-label="Кнопка плей, пауза"></button>
+        </div>
+        <div class="production__description">
+          <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="production__btn btn" href="#">Сделать заказ</a>
         </div>
       </section>
 
@@ -233,6 +201,31 @@
          </div>
        </div>
     </footer>
+
+    <div class="modal modal--close">
+      <div class="modal__main">
+        <h2 class="madal__tittle">Добавить в корзину</h2>
+        <p class="modal__text">Выберите размер:</p>
+        <form class="modal__form-order" action="https://echo.htmlacademy.ru" method="post">
+          <ul class="modal__toogle-list">
+            <li class="modal__toogle-item">
+              <input class="modal__toogle visually-hidden" id="size_s" type="radio" name="size" value="s" checked>
+              <label class="modal__label" for="size_s" aria-label="Размер S">S</label>
+            </li>
+            <li class="modal__toogle-item">
+              <input class="modal__toogle visually-hidden" id="size_m" type="radio" name="size" value="m">
+              <label class="modal__label" for="size_m" aria-label="Размер M">M</label>
+            </li>
+            <li class="modal__toogle-item">
+              <input class="modal__toogle visually-hidden" id="size_l" type="radio" name="size" value="l">
+              <label class="modal__label" for="size_l" aria-label="Размер L">L</label>
+            </li>
+          </ul>
+          <button class="modal__btn btn" type="submit">Добавить</button>
+        </form>
+        <button class="modal__close-btn" type="button" aria-label="Закрыть форму заказа"></button>
+      </div>
+    </div>
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/script.min.js"></script>
