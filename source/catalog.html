@@ -55,7 +55,7 @@
       </nav>
     </header>
     <main class="page-main">
-      <header class="page-main__header">
+      <header class="page-main__header page-main__header--submain">
         <h1 class="page-main__tittle">Каталог товаров</h1>
       </header>
       <section class="catalog">
@@ -80,7 +80,7 @@
                 <p class="product__description">Рост 30 см, вес 200 г</p>
                 <div class="product__buy-box">
                   <b class="product__price">1 200 руб.</b>
-                  <a class="prouct__buy-btn" href="#" aria-label="Добавить в корзину">
+                  <a class="product__buy-btn" href="#" aria-label="Добавить в корзину">
                     <svg class="product-icon-cart" width="20" height="19">
                       <use xlink:href="#sprite-icon-cart"></use>
                     </svg>
@@ -107,7 +107,7 @@
                 <p class="product__description">Диаметр 15 см, высота 10 см</p>
                 <div class="product__buy-box">
                   <b class="product__price">690 руб.</b>
-                  <a class="prouct__buy-btn" href="#" aria-label="Добавить в корзину">
+                  <a class="product__buy-btn" href="#" aria-label="Добавить в корзину">
                     <svg class="product-icon-cart" width="20" height="19">
                       <use xlink:href="#sprite-icon-cart"></use>
                     </svg>
@@ -134,7 +134,7 @@
                 <p class="product__description">Диаметр 30 см, высота 30 см</p>
                 <div class="product__buy-box">
                   <b class="product__price">1 500 руб.</b>
-                  <a class="prouct__buy-btn" href="#" aria-label="Добавить в корзину">
+                  <a class="product__buy-btn" href="#" aria-label="Добавить в корзину">
                     <svg class="product-icon-cart" width="20" height="19">
                       <use xlink:href="#sprite-icon-cart"></use>
                     </svg>
@@ -155,9 +155,9 @@
             <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
             <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
-            <img class="player__img" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Видео производсвта нашей продукции">
+            <img class="video-player__img" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Видео производсвта нашей продукции">
           </picture>
-          <button class="player__play-btn" type="button" aria-label="Кнопка плей, пауза"></button>
+          <button class="video-player__play-btn" type="button" aria-label="Кнопка плей, пауза"></button>
         </div>
         <div class="production__description">
           <p class="production__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
@@ -204,7 +204,7 @@
 
     <div class="modal modal--close">
       <div class="modal__main">
-        <h2 class="madal__tittle">Добавить в корзину</h2>
+        <h2 class="modal__tittle">Добавить в корзину</h2>
         <p class="modal__text">Выберите размер:</p>
         <form class="modal__form-order" action="https://echo.htmlacademy.ru" method="post">
           <ul class="modal__toogle-list">

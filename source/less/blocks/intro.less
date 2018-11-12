@@ -1,6 +1,6 @@
 .intro {
   box-sizing: border-box;
-  padding-top: 70px;
+  //padding-top: 70px;
   margin-bottom: 27px;
   color: @black;
   background-color: @gray-light;
@@ -14,8 +14,8 @@
   }
 
   @media (min-width: @width-tablets) {
-    position: relative;
-    padding-top: 153px;
+    //position: relative;
+    //padding-top: 153px;
     margin-bottom: 47px;
     background-image: url("../img/hero-tablet@1x.jpg");
     background-size: 1150px auto;
@@ -26,6 +26,7 @@
       background-image: url("../img/hero-tablet@2x.jpg");
     }
 
+    /*
     &::after {
       content: "";
       position: absolute;
@@ -37,7 +38,7 @@
       background-repeat: repeat-x;
       background-position: -5px 0;
       background-size: auto 23px;
-    }
+    }*/
   }
 
   @media (min-width: @width-desktop) {
@@ -48,11 +49,12 @@
       background-image: url("../img/hero-desktop@2x.jpg");
     }
 
+    /*
     &::after {
       height: 15px;
       background-position: 13px 0;
       background-size: auto 37px;
-    }
+    }*/
   }
 }
 
@@ -66,21 +68,22 @@
   margin-left: auto;
   margin-right: auto;
   width: 80%;
-  font-size: 27px;
-  line-height: 30px;
-  font-weight: 700;
-  text-align: center;
+  //font-size: 27px;
+  //line-height: 30px;
+  //font-weight: 700;
+  //text-align: center;
+  //color: @black;
 
   @media (min-width: @width-tablets) {
     margin-bottom: 373px;
-    font-size: 43px;
-    line-height: 50px;
+    //font-size: 43px;
+    //line-height: 50px;
   }
 
   @media (min-width: @width-desktop) {
     margin-bottom: 359px;
-    font-size: 53px;
-    line-height: 57px;
+    //font-size: 53px;
+    //line-height: 57px;
   }
 }
 
@@ -122,11 +125,13 @@
     background-color: @dark-green;
   }
 
-  &--interior:hover {
+  &--interior:hover,
+  &--interior:focus {
     background-color: @green-hover;
   }
 
-  &--toys:hover {
+  &--toys:hover,
+  &--toys:focus {
     background-color: @dark-green-hover;
   }
 
@@ -134,7 +139,8 @@
     color: rgba(255, 255, 255, 0.3);
   }
 
-  &:hover .intro__icon {
+  &:hover .intro__icon,
+  &:focus .intro__icon {
     opacity: 0.7;
   }
 
@@ -148,13 +154,16 @@
     padding-left: 35px;
     font-size: 20px;
     line-height: 30px;
+    outline: none;
 
-    &:hover {
+    &:hover,
+    &:focus {
       padding-top: 23px;
       padding-bottom: 34px;
     }
 
-    &:hover::before {
+    &:hover::before,
+    &:focus::before {
       content: "";
       position: absolute;
       left: 0;
@@ -163,15 +172,18 @@
       width: 100%;
     }
 
-    &--interior:hover::before {
+    &--interior:hover::before,
+    &--interior:focus::before{
       background-color: @green-hover;
     }
 
-    &--toys:hover::before {
+    &--toys:hover::before,
+    &--toys:focus::before{
       background-color: @dark-green-hover;
     }
 
-    &:hover .intro__icon {
+    &:hover .intro__icon,
+    &:focus .intro__icon{
       transform: translateY(-60%);
     }
   }
