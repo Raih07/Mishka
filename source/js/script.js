@@ -139,3 +139,77 @@ if (catalogOrderBtn) {
     }
   });
 }
+
+//*****Переключение слайдера*****//
+
+var slider_wrapper = document.querySelector('.reviews__slider');
+var slider_list = document.querySelector('.slider__list');
+var revPrev = document.querySelector('.slider__btn--prev');
+var revNext = document.querySelector('.slider__btn--next');
+var slideToogles = document.querySelector('.slider__toggles');
+
+if (slider_list) {
+  var slideCount = 0;
+  var maxSlideCount = slider_list.children.length;
+
+  revNext.addEventListener('click', setNextSlide);
+  revPrev.addEventListener('click', setPrevSlide);
+
+  slideToogles.addEventListener('click', slideCountControl);
+
+  function slideCountControl() {
+    switch(slideCount) {
+      case maxSlideCount - 1:
+        revNext.disabled = true;
+        break;
+      case 0:
+        revPrev.disabled = true;
+        break;
+      default:
+        revNext.disabled = false;
+        revPrev.disabled = false;
+    }
+  }
+
+  function setNextSlide() {
+    console.log('++');
+    if (slideCount < maxSlideCount - 1) {
+      slideCount++;
+      slider_list.style.transform = 'translateX(-' + slideCount * slider_wrapper.offsetWidth + 'px)';
+    }
+
+    /*
+    if (slideCount === maxSlideCount - 1) {
+    revNext.disabled = true;
+    } else {
+    revNext.disabled = false;
+    }*/
+  }
+
+  function setPrevSlide() {
+    console.log('--');
+    if (slideCount > 0) {
+      slideCount--;
+      slider_list.style.transform = 'translateX(-' + slideCount * slider_wrapper.offsetWidth + 'px)';
+    }
+
+    /*
+    if (slideCount === 0) {
+    revPrev.disabled = true;
+    } else {
+    revPrev.disabled = false;
+    }*/
+  }
+
+  $('.slider__list').swipe( {
+    swipeLeft: function() {
+      setNextSlide();
+      slideCountControl();
+    },
+    swipeRight: function() {
+      setPrevSlide();
+      slideCountControl();
+    },
+    threshold: 0
+  });
+}

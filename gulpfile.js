@@ -69,7 +69,9 @@ gulp.task("clean", function() {
 gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/js/picturefill.min.js"
+    "source/js/picturefill.min.js",
+    "source/js/jquery-3.3.1.min.js",
+    "source/js/jquery.touchSwipe.min.js"
   ], {
     base: "source"
   })

@@ -1,5 +1,9 @@
 .slider__toggles {
   display: flex;
+
+  @media (min-width: @width-tablets) {
+    z-index: 1;
+  }
 }
 
 .slider__btn {
@@ -18,11 +22,13 @@
     border: none;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.6;
   }
 
-  &:active {
+  &:active,
+  &:disabled {
     opacity: 0.3;
   }
 
