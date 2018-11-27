@@ -142,15 +142,15 @@ if (catalogOrderBtn) {
 
 //*****Переключение слайдера*****//
 
-var slider_wrapper = document.querySelector('.reviews__slider');
-var slider_list = document.querySelector('.slider__list');
+var sliderWrapper = document.querySelector('.reviews__slider');
+var sliderList = document.querySelector('.slider__list');
 var revPrev = document.querySelector('.slider__btn--prev');
 var revNext = document.querySelector('.slider__btn--next');
 var slideToogles = document.querySelector('.slider__toggles');
 
-if (slider_list) {
+if (sliderList) {
   var slideCount = 0;
-  var maxSlideCount = slider_list.children.length;
+  var maxSlideCount = sliderList.children.length;
 
   revNext.addEventListener('click', setNextSlide);
   revPrev.addEventListener('click', setPrevSlide);
@@ -175,7 +175,7 @@ if (slider_list) {
     console.log('++');
     if (slideCount < maxSlideCount - 1) {
       slideCount++;
-      slider_list.style.transform = 'translateX(-' + slideCount * slider_wrapper.offsetWidth + 'px)';
+      sliderList.style.transform = 'translateX(-' + slideCount * sliderWrapper.offsetWidth + 'px)';
     }
 
     /*
@@ -190,7 +190,7 @@ if (slider_list) {
     console.log('--');
     if (slideCount > 0) {
       slideCount--;
-      slider_list.style.transform = 'translateX(-' + slideCount * slider_wrapper.offsetWidth + 'px)';
+      sliderList.style.transform = 'translateX(-' + slideCount * sliderWrapper.offsetWidth + 'px)';
     }
 
     /*
